@@ -6,6 +6,7 @@ efoerster.texlab
 james-yu.latex-workshop
 kevinrose.vsc-python-indent
 ms-ceintl.vscode-language-pack-ru
+ms-python.debugpy
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
