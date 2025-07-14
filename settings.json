@@ -9,12 +9,6 @@
         "editor.fontFamily"
     ],
     "editor.fontLigatures": true,
-    "notebook.output.scrolling": true,
-    "notebook.formatOnSave.enabled": true,
-    "notebook.codeActionsOnSave": {
-        //"notebook.source.fixAll": "explicit",
-        "notebook.source.organizeImports": "explicit"
-    },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.insertSpaces": true,
@@ -43,7 +37,6 @@
     "basedpyright.analysis.typeCheckingMode": "standard",
     "workbench.tree.renderIndentGuides": "always",
     "ruff.nativeServer": "on",
-    "python.defaultInterpreterPath": "D:\\Python\\Эконометрика\\.venv",
     "workbench.welcomePage.extraAnnouncements": false,
     "jupyter.askForKernelRestart": false,
     "editor.wordWrap": "on",
@@ -257,4 +250,11 @@
     "latex-workshop.message.badbox.show": "none",
     "latex-workshop.message.warning.show": false,
     "editor.indentSize": "tabSize",
+    "notebook.output.textLineLimit": 25,
+    "notebook.output.scrolling": true,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        //"notebook.source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
 }
