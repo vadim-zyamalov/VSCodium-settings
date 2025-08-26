@@ -14,10 +14,6 @@
         "editor.insertSpaces": true,
         "editor.tabSize": 4,
         "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            //"source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-        },
     },
     "[markdown]": {
         "editor.insertSpaces": true,
@@ -28,11 +24,12 @@
         "editor.tabSize": 2,
         "editor.defaultFormatter": "efoerster.texlab"
     },
+    "[r]": {
+        "editor.formatOnSave": true
+    },
     "markdown.math.enabled": false,
-    "workbench.iconTheme": "catppuccin-mocha",
     "editor.tabCompletion": "on",
     "explorer.copyRelativePathSeparator": "/",
-    "workbench.colorTheme": "Catppuccin Mocha",
     "window.zoomLevel": 1,
     "basedpyright.analysis.typeCheckingMode": "standard",
     "workbench.tree.renderIndentGuides": "always",
@@ -257,4 +254,59 @@
         //"notebook.source.fixAll": "explicit",
         "source.organizeImports": "explicit"
     },
+    "jupyter.completionTriggerCharacters": {
+        "bash": [
+            "$",
+            "{"
+        ],
+        "java": [
+            ".",
+            "@",
+            "#"
+        ],
+        "javascript": [
+            ".",
+            "\"",
+            "'",
+            "/",
+            "@"
+        ],
+        "python": [
+            ".",
+            "%",
+            "'",
+            "\""
+        ],
+        "julia": [
+            "."
+        ],
+        "r": [
+            "[",
+            "(",
+            ",",
+            "$",
+            "@",
+            "\"",
+            "'"
+        ],
+        "rust": [
+            ".",
+            ":"
+        ],
+        "scala": [
+            "."
+        ],
+        "typescript": [
+            ".",
+            "\"",
+            "'",
+            "/",
+            "@",
+            "<"
+        ]
+    },
+    "jupyter.experiments.enabled": false,
+    "ipynb.experimental.serialization": false,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
 }
