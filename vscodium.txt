@@ -1,8 +1,8 @@
+astral-sh.ty
 catppuccin.catppuccin-vsc
 catppuccin.catppuccin-vsc-icons
 catppuccin.catppuccin-vsc-pack
 charliermarsh.ruff
-detachhead.basedpyright
 efoerster.texlab
 james-yu.latex-workshop
 kevinrose.vsc-python-indent
