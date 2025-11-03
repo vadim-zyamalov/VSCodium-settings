@@ -20,12 +20,12 @@ goto select
 
 :dump
 copy "%APPDATA%\VSCodium\User\settings.json" .\settings.json
-call codium --list-extensions > vscodium.txt
+call codium --list-extensions > packages.txt
 goto :select
 
 :load
 copy .\settings.json "%APPDATA%\VSCodium\User\"
-for /f %%l in (vscodium.txt) do (
+for /f %%l in (packages.txt) do (
 	call codium --install-extension %%l --force
 )
 goto :select

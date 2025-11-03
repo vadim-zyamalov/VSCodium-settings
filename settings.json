@@ -4,7 +4,7 @@
         120
     ],
     "files.trimTrailingWhitespace": true,
-    "editor.fontFamily": "Iosevka Expanded, Cascadia Code NF, 'Courier New', monospace",
+    "editor.fontFamily": "Cascadia Code NF, 'Courier New', monospace",
     "workbench.settings.applyToAllProfiles": [
         "editor.fontFamily"
     ],
@@ -307,8 +307,6 @@
     },
     "jupyter.experiments.enabled": false,
     "ipynb.experimental.serialization": false,
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha",
     "editor.inlayHints.enabled": "offUnlessPressed",
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "latex-workshop.latex.autoBuild.run": "never",
@@ -333,4 +331,7 @@
         "-n1",
         "-n36"
     ],
+    "latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize": 2,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
 }
