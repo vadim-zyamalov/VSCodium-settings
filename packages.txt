@@ -17,3 +17,4 @@ ms-toolsai.vscode-jupyter-slideshow
 posit.air-vscode
 reditorsupport.r
 reditorsupport.r-syntax
+yzhang.markdown-all-in-one

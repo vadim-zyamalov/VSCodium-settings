@@ -27,7 +27,6 @@
     "[r]": {
         "editor.formatOnSave": true
     },
-    "markdown.math.enabled": false,
     "editor.tabCompletion": "on",
     "explorer.copyRelativePathSeparator": "/",
     "window.zoomLevel": 1,
@@ -334,4 +333,5 @@
     "latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize": 2,
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
+    "ty.experimental.rename": true,
 }
