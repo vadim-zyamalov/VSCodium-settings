@@ -1,41 +1,92 @@
 {
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "files.trimTrailingWhitespace": true,
-    "editor.fontFamily": "Iosevka Expanded, Cascadia Code NF, 'Courier New', monospace",
-    "workbench.settings.applyToAllProfiles": [
-        "editor.fontFamily"
-    ],
-    "editor.fontLigatures": true,
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
+    "[latex]": {
+        "editor.defaultFormatter": "efoerster.texlab",
         "editor.insertSpaces": true,
-        "editor.tabSize": 4,
-        "editor.formatOnSave": true,
+        "editor.tabSize": 2
     },
     "[markdown]": {
         "editor.insertSpaces": true,
-        "editor.tabSize": 2,
+        "editor.tabSize": 2
     },
-    "[latex]": {
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
         "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "efoerster.texlab"
+        "editor.tabSize": 4
     },
     "[r]": {
         "editor.formatOnSave": true
     },
-    "editor.tabCompletion": "on",
-    "explorer.copyRelativePathSeparator": "/",
-    "window.zoomLevel": 1,
     "basedpyright.analysis.typeCheckingMode": "standard",
-    "workbench.tree.renderIndentGuides": "always",
-    "ruff.nativeServer": "on",
-    "workbench.welcomePage.extraAnnouncements": false,
-    "jupyter.askForKernelRestart": false,
+    "editor.fontFamily": "Iosevka Expanded, Cascadia Code NF, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.indentSize": "tabSize",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.tabCompletion": "on",
     "editor.wordWrap": "on",
+    "explorer.copyRelativePathSeparator": "/",
+    "files.trimTrailingWhitespace": true,
+    "ipynb.experimental.serialization": false,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.completionTriggerCharacters": {
+        "bash": [
+            "$",
+            "{"
+        ],
+        "java": [
+            ".",
+            "@",
+            "#"
+        ],
+        "javascript": [
+            ".",
+            "\"",
+            "'",
+            "/",
+            "@"
+        ],
+        "julia": [
+            "."
+        ],
+        "python": [
+            ".",
+            "%",
+            "'",
+            "\""
+        ],
+        "r": [
+            "[",
+            "(",
+            ",",
+            "$",
+            "@",
+            "\"",
+            "'"
+        ],
+        "rust": [
+            ".",
+            ":"
+        ],
+        "scala": [
+            "."
+        ],
+        "typescript": [
+            ".",
+            "\"",
+            "'",
+            "/",
+            "@",
+            "<"
+        ]
+    },
+    "jupyter.experiments.enabled": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.outDir": "output",
+    "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk",
@@ -104,8 +155,6 @@
     ],
     "latex-workshop.latex.tools": [
         {
-            "name": "latexmk",
-            "command": "latexmk",
             "args": [
                 "-shell-escape",
                 "-synctex=1",
@@ -115,12 +164,13 @@
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
-            "env": {}
+            "command": "latexmk",
+            "env": {},
+            "name": "latexmk"
         },
         {
-            "name": "lualatexmk",
-            "command": "latexmk",
             "args": [
+                "-shell-escape",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
@@ -128,11 +178,11 @@
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
-            "env": {}
+            "command": "latexmk",
+            "env": {},
+            "name": "lualatexmk"
         },
         {
-            "name": "xelatexmk",
-            "command": "latexmk",
             "args": [
                 "-shell-escape",
                 "-synctex=1",
@@ -142,173 +192,110 @@
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
-            "env": {}
+            "command": "latexmk",
+            "env": {},
+            "name": "xelatexmk"
         },
         {
-            "name": "latexmk_rconly",
-            "command": "latexmk",
             "args": [
                 "%DOC%"
             ],
-            "env": {}
+            "command": "latexmk",
+            "env": {},
+            "name": "latexmk_rconly"
         },
         {
-            "name": "pdflatex",
-            "command": "pdflatex",
             "args": [
+                "-shell-escape",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "%DOC%"
             ],
-            "env": {}
+            "command": "pdflatex",
+            "env": {},
+            "name": "pdflatex"
         },
         {
-            "name": "bibtex",
-            "command": "bibtex",
             "args": [
                 "%DOCFILE%"
             ],
-            "env": {}
+            "command": "bibtex",
+            "env": {},
+            "name": "bibtex"
         },
         {
-            "name": "rnw2tex",
-            "command": "Rscript",
             "args": [
                 "-e",
                 "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
             ],
-            "env": {}
+            "command": "Rscript",
+            "env": {},
+            "name": "rnw2tex"
         },
         {
-            "name": "jnw2tex",
-            "command": "julia",
             "args": [
                 "-e",
                 "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
             ],
-            "env": {}
+            "command": "julia",
+            "env": {},
+            "name": "jnw2tex"
         },
         {
-            "name": "jnw2texminted",
-            "command": "julia",
             "args": [
                 "-e",
                 "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
             ],
-            "env": {}
+            "command": "julia",
+            "env": {},
+            "name": "jnw2texminted"
         },
         {
-            "name": "pnw2tex",
-            "command": "pweave",
             "args": [
                 "-f",
                 "tex",
                 "%DOC_EXT%"
             ],
-            "env": {}
+            "command": "pweave",
+            "env": {},
+            "name": "pnw2tex"
         },
         {
-            "name": "pnw2texminted",
-            "command": "pweave",
             "args": [
                 "-f",
                 "texminted",
                 "%DOC_EXT%"
             ],
-            "env": {}
+            "command": "pweave",
+            "env": {},
+            "name": "pnw2texminted"
         },
         {
-            "name": "tectonic",
-            "command": "tectonic",
             "args": [
                 "--synctex",
                 "--keep-logs",
                 "--print",
                 "%DOC%.tex"
             ],
-            "env": {}
+            "command": "tectonic",
+            "env": {},
+            "name": "tectonic"
         },
         {
-            "name": "copyPDF",
-            "command": "cmd.exe",
             "args": [
                 "/c",
                 "copy",
                 "%OUTDIR%\\%DOCFILE%.pdf",
                 "%DIR%",
             ],
-            "env": {}
+            "command": "cmd.exe",
+            "env": {},
+            "name": "copyPDF"
         },
     ],
-    "latex-workshop.latex.outDir": "output",
-    "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
-    "latex-workshop.message.badbox.show": "none",
-    "latex-workshop.message.warning.show": false,
-    "editor.indentSize": "tabSize",
-    "notebook.output.textLineLimit": 25,
-    "notebook.output.scrolling": true,
-    "notebook.formatOnSave.enabled": true,
-    "notebook.codeActionsOnSave": {
-        //"notebook.source.fixAll": "explicit",
-        "source.organizeImports": "explicit"
-    },
-    "jupyter.completionTriggerCharacters": {
-        "bash": [
-            "$",
-            "{"
-        ],
-        "java": [
-            ".",
-            "@",
-            "#"
-        ],
-        "javascript": [
-            ".",
-            "\"",
-            "'",
-            "/",
-            "@"
-        ],
-        "python": [
-            ".",
-            "%",
-            "'",
-            "\""
-        ],
-        "julia": [
-            "."
-        ],
-        "r": [
-            "[",
-            "(",
-            ",",
-            "$",
-            "@",
-            "\"",
-            "'"
-        ],
-        "rust": [
-            ".",
-            ":"
-        ],
-        "scala": [
-            "."
-        ],
-        "typescript": [
-            ".",
-            "\"",
-            "'",
-            "/",
-            "@",
-            "<"
-        ]
-    },
-    "jupyter.experiments.enabled": false,
-    "ipynb.experimental.serialization": false,
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize": 2,
+    "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.linting.chktex.exec.args": [
         "-n22",
         "-n30",
@@ -319,7 +306,16 @@
         "-n1",
         "-n36"
     ],
-    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.message.badbox.show": "none",
+    "latex-workshop.message.warning.show": false,
+    "notebook.codeActionsOnSave": {
+        //"notebook.source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.output.scrolling": true,
+    "notebook.output.textLineLimit": 25,
+    "ruff.nativeServer": "on",
     "texlab.chktex.additionalArgs": [
         "-n22",
         "-n30",
@@ -330,10 +326,16 @@
         "-n1",
         "-n36"
     ],
-    "latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize": 2,
+    "ty.experimental.rename": true,
+    "window.commandCenter": false,
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
-    "ty.experimental.rename": true,
     "workbench.navigationControl.enabled": false,
-    "window.commandCenter": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontFamily"
+    ],
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.welcomePage.extraAnnouncements": false
 }
