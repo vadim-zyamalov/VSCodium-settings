@@ -15,10 +15,12 @@
         "editor.tabSize": 4
     },
     "[r]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Posit.air-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
     },
-    "basedpyright.analysis.typeCheckingMode": "standard",
-    "editor.fontFamily": "Iosevka Expanded, Cascadia Code NF, 'Courier New', monospace",
+    "editor.fontFamily": "Cascadia Code NF, Iosevka Expanded, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.indentSize": "tabSize",
     "editor.inlayHints.enabled": "offUnlessPressed",
@@ -326,16 +328,50 @@
         "-n1",
         "-n36"
     ],
-    "ty.experimental.rename": true,
     "window.commandCenter": false,
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha",
     "workbench.navigationControl.enabled": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "workbench.settings.applyToAllProfiles": [
         "editor.fontFamily"
     ],
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.welcomePage.extraAnnouncements": false
+    "workbench.welcomePage.extraAnnouncements": false,
+    "workbench.settings.showAISearchToggle": false,
+    "terminal.integrated.allowChords": false,
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "function.declaration": {
+                "foreground": "#569CD6",
+                "fontStyle": "bold"
+            },
+            "function.defaultLibrary": {
+                "foreground": "#DCDCAA"
+            },
+            "type": {
+                "foreground": "#4EC9B0"
+            },
+            "type.defaultLibrary": {
+                "foreground": "#4EC9B0"
+            },
+            "type.declaration": {
+                "foreground": "#4EC9B0",
+                "fontStyle": "bold"
+            },
+            "parameter": {
+                "foreground": "#569CD6",
+                "fontStyle": "italic"
+            },
+            "variable.readonly.defaultLibrary": {
+                "foreground": "#CE9178"
+            }
+        }
+    },
+    "asymptote.compile.autoCompile": false,
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    }
 }
